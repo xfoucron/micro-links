@@ -54,6 +54,7 @@ jobs:
           push: true
           tags: ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}
+          platforms: linux/amd64
 
       - name: Generate attestation
         uses: actions/attest-build-provenance@v1
