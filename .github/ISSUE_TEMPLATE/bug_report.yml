@@ -1,0 +1,58 @@
+---
+
+name: Bug report
+description: Report an issue with MicroLinks you've discovered
+title: "[bug] <title>"
+labels: [ "bug", "need triage" ]
+body:
+  - type: checkboxes
+    attributes:
+      label: |
+        Is there an existing issue for this?
+      description: |
+        Please search to see if an issue already exists for the bug you encountered.
+      options:
+        - label: I have searched the existing issues
+          required: true
+
+  - type: textarea
+    attributes:
+      label: |
+        Current behavior
+      description: |
+        A description of what you're experiencing.
+
+  - type: textarea
+    attributes:
+      label: |
+        Expected behavior
+      description: |
+        A description of what you expected to happen.
+
+  - type: textarea
+    attributes:
+      label: |
+        Environment
+      placeholder: |
+        - Versions: 1.0.0
+        - OS : Arch
+        - Browser: Firefox
+        - Deployment: Kubernetes, custom...
+
+  - type: textarea
+    attributes:
+      label: Steps to reproduce
+      description: |
+        Steps to reproduce the behavior.
+      placeholder: |
+        1. ...
+        2. ...
+        3. ...
+
+  - type: textarea
+    attributes:
+      label: Additional
+      description: |
+        Links, references or images that will give us more context about the issue you are encountering.
+    validations:
+      required: false
