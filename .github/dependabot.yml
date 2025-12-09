@@ -1,0 +1,9 @@
+---
+
+version: 2
+updates:
+  - package-ecosystem: bun
+    directories:
+      - apps/frontend
+    schedule:
+      interval: daily
