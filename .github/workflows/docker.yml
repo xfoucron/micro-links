@@ -66,7 +66,7 @@ jobs:
       - name: Run Trivy to scan vulnerabilities
         uses: aquasecurity/trivy-action@0.33.1
         with:
-          image-ref: ${{ env.REGISTRY }}/${{ github.repository }}/${{ matrix.service.name }}:${{ steps.build.outputs.digest }}
+          image-ref: ${{ env.REGISTRY }}/${{ github.repository }}/${{ matrix.service.name }}@${{ steps.build.outputs.digest }}
           format: github
           output: dependency-results.sbom.json
           github-pat: ${{ secrets.GITHUB_TOKEN }}
